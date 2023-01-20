@@ -27,6 +27,22 @@
     justify-content: center;
     flex-direction: column;
     height: 100vh;
+    @media all and (max-width: 1600px){
+      max-width: 1200px;
+    }
+    @media all and (max-width: 1400px){
+      padding: 0 75px;
+    }
+    @media all and (max-width: 1024px){
+      padding: 0 50px;
+    }
+    @media all and (max-width: 768px){
+      padding: 0 35px;
+    }
+    @media all and (max-width: 500px){
+      padding: 0 20px;
+      padding-bottom: 18vh;
+    }
   }
   &__decoration{
     img{
@@ -36,10 +52,20 @@
     &-left{
       top: 255px;
       left: 261px;
+      @media all and (max-width: 1024px){
+        left: 20px;
+      }
+      @media all and (max-width: 500px){
+        bottom: 154px;
+        top: auto;
+      }
     }
     &-right{
       bottom: 376px;
       right: 310px;
+      @media all and (max-width: 1024px){
+        right: 40px;
+      }
     }
     &-rl{
       bottom: -487px;
@@ -48,6 +74,16 @@
       animation-duration: 12000ms;
       animation-iteration-count: infinite;
       animation-timing-function: linear;
+      @media all and (max-width: 1024px){
+        width: 70%;
+        bottom: -282px;
+        left: -349px;
+      }
+      @media all and (max-width: 768px){
+        width: 80%;
+        bottom: -108px;
+        left: -119px;
+      }
     }
     &-rr{
       top: -933px;
@@ -57,6 +93,21 @@
       animation-duration: 15000ms;
       animation-iteration-count: infinite;
       animation-timing-function: linear;
+      @media all and (max-width: 1024px){
+        width: 70%;
+        top: -326px;
+        right: -313px;
+      }
+      @media all and (max-width: 768px){
+        width: 80%;
+        top: -180px;
+        right: -180px;
+      }
+      @media all and (max-width: 500px){
+        width: 80%;
+        top: -180px;
+        right: -180px;
+      }
     }
   }
   &__logo{
@@ -66,19 +117,58 @@
     width: 100%;
     display: flex;
     justify-content: center;
+    @media all and (max-width: 1600px){
+
+    }
+    @media all and (max-width: 1400px){
+
+    }
+    @media all and (max-width: 1024px){
+
+    }
+    @media all and (max-width: 768px){
+
+    }
+    @media all and (max-width: 500px){
+
+    }
   }
   &__title{
-    margin-bottom: 5.1rem;
+    margin-bottom: 51px;
     width: 100%;
     z-index: 1;
+    @media all and (min-width: 1400px) and (max-height: 900px){
+      margin-bottom: 30px;
+    }
+    @media all and (max-width: 400px){
+      margin-bottom: 20px;
+    }
     span{
       font-weight: 900;
-      font-size: 8.6rem;
+      font-size: 86px;
       line-height: 98.3%;
       letter-spacing: 0.02em;
       text-transform: uppercase;
       color: #FFFFFF;
       display: block;
+      @media all and (max-width: 1600px){
+        font-size: 70px;
+      }
+      @media all and (max-width: 1400px){
+        font-size: 60px;
+      }
+      @media all and (max-width: 1024px){
+        font-size: 50px;
+      }
+      @media all and (max-width: 768px){
+        font-size: 40px;
+      }
+      @media all and (max-width: 500px){
+        font-size: 35px;
+      }
+      @media all and (max-width: 400px){
+        font-size: 30px;
+      }
       &:nth-child(odd){
         text-align: left;
       }
@@ -89,17 +179,41 @@
   }
   &__text{
     font-weight: 500;
-    font-size: 2.4rem;
+    font-size: 24px;
     line-height: 98.3%;
     letter-spacing: 0.02em;
     text-transform: uppercase;
     color: #15223D;
-    padding: 2.5rem 4.3rem;
-    background: rgba(169, 179, 192, 0.14);
+    padding: 25px 43px;
+    background: #E0E4E9;
     border-radius: 37px;
     width: auto;
     display: inline-block;
-    margin-bottom: 9.4rem;
+    margin-bottom: 94px;
+    position: relative;
+    @media all and (max-width: 1600px){
+
+    }
+    @media all and (min-width: 1400px) and (max-height: 900px){
+      margin-bottom: 76px;
+    }
+    @media all and (max-width: 1400px){
+      margin-bottom: 50px;
+    }
+    @media all and (max-width: 1024px){
+      font-size: 20px;
+    }
+    @media all and (max-width: 768px){
+      font-size: 18px;
+      width: 100%;
+    }
+    @media all and (max-width: 500px){
+      font-size: 14px;
+    }
+    @media all and (max-width: 400px){
+      margin-bottom: 20px;
+      padding: 25px 20px;
+    }
   }
   &__center{
     position: relative;
@@ -109,35 +223,88 @@
   &__up{
     position: absolute;
     font-weight: 500;
-    font-size: 3.6rem;
+    font-size: 36px;
     line-height: 98.3%;
     letter-spacing: 0.02em;
     text-transform: uppercase;
     color: #15223D;
     top: -49px;
     left: -68px;
+    @media all and (max-width: 1600px){
+
+    }
+    @media all and (max-width: 1400px){
+      top: -30px;
+      width: 130px;
+      left: 5px;
+    }
+    @media all and (max-width: 1024px){
+      top: -20px;
+      width: 100px;
+      left: 18px;
+    }
+    @media all and (max-width: 768px){
+      top: -20px;
+      width: 80px;
+      left: 0px;
+    }
+    @media all and (max-width: 400px){
+      top: 4px;
+    }
+    svg{
+      max-width: 100%;
+    }
   }
   &__wow{
     font-weight: 500;
-    font-size: 15.1rem;
+    font-size: 151px;
     line-height: 98.3%;
     letter-spacing: 0.02em;
     text-transform: uppercase;
     color: #15223D;
-    margin-bottom: 11.5rem;
+    margin-bottom: 115px;
+    margin-right: auto;
+    margin-left: auto;
+    @media all and (max-width: 1600px){
+      margin-bottom: 90px;
+    }
+    @media all and (max-width: 1400px){
+      margin-bottom: 0px;
+      max-width: 80%;
+    }
+    @media all and (min-width: 1400px) and (max-height: 900px){
+      margin-bottom: 0px;
+    }
+    @media all and (max-width: 1024px){
+
+    }
+    @media all and (max-width: 768px){
+
+    }
+    @media all and (max-width: 500px){
+      max-width: 100%;
+      margin-bottom: 0;
+    }
+    svg{
+      max-width: 100%;
+    }
   }
   &__btn{
     background: linear-gradient(131.19deg, #FFFFFF 15.91%, #FFFFFF 84.39%);
     box-shadow: 10px 10px 30px rgba(174, 174, 192, 0.4), -10px -10px 30px #FFFFFF;
     border-radius: 75px;
-    padding: 2rem 5.5rem;
+    padding: 20px 55px;
     position: relative;
     overflow: hidden;
     cursor: pointer;
     transition: 0.3s ease-in-out;
+    @media all and (max-width: 768px){
+      padding: 20px 20px;
+      width: 100%;
+    }
     svg{
       position: absolute;
-      right: 2.5rem;
+      right: 25px;
       top: calc(50% - 4px);
       opacity: 0;
       transition: 0.3s ease-in-out;
@@ -145,8 +312,8 @@
       pointer-events: none;
     }
     &:hover{
-      padding-left: 3.2rem;
-      padding-right: 7.9rem;
+      padding-left: 32px;
+      padding-right: 79px;
       svg{
         opacity: 1;
       }
@@ -162,7 +329,7 @@
       position: relative;
       transition: 0.3s ease-in-out;
       font-weight: 400;
-      font-size: 1.4rem;
+      font-size: 14px;
       line-height: 100%;
       text-align: center;
       letter-spacing: 0.02em;
@@ -185,22 +352,49 @@
   }
   &__socials{
     position: absolute;
-    bottom: 7.6rem;
+    bottom: 76px;
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     transform: translateY(0);
     transition: 0.5s ease-in-out;
+    @media all and (max-width: 1024px){
+      bottom: 50px;
+    }
+    @media all and (max-width: 768px){
+      bottom: 50px;
+    }
     &-item{
-      margin: 0 3.8rem;
+      margin: 0 38px;
       text-decoration: none;
       font-weight: 400;
-      font-size: 1.4rem;
+      font-size: 14px;
       line-height: 98.3%;
       letter-spacing: 0.02em;
       color: #A9B3C0;
       border-bottom: 1px solid transparent;
       transition: 0.3s ease-in-out;
+      @media all and (max-width: 1600px){
+
+      }
+      @media all and (max-width: 1400px){
+
+      }
+      @media all and (max-width: 1024px){
+        font-size: 13px;
+        margin-bottom: 20px;
+      }
+      @media all and (max-width: 768px){
+
+      }
+      @media all and (max-width: 500px){
+        font-size: 12px;
+      }
+      @media all and (max-width: 400px){
+        margin: 0 12px;
+        margin-bottom: 10px;
+      }
       &:hover{
         border-bottom: 1px solid #A9B3C0;
       }
@@ -212,6 +406,24 @@
     bottom: 76px;
     transform: rotate(90deg);
     transform-origin: bottom right;
+    @media all and (max-width: 1600px){
+
+    }
+    @media all and (max-width: 1400px){
+
+    }
+    @media all and (max-width: 1024px){
+
+    }
+    @media all and (max-width: 768px){
+      transform: rotate(0);
+      transform-origin: center;
+      bottom: 20px;
+      right: auto;
+    }
+    @media all and (max-width: 500px){
+
+    }
   }
 }
 .fade{
@@ -260,7 +472,7 @@
     filter: drop-shadow(30px 90px 98px rgba(0, 0, 0, 0.05));
     backdrop-filter: blur(3px);
     border-radius: 31px;
-    padding: 4.9rem 7.8rem 7.8rem 7.8rem;
+    padding: 49px 78px 78px 78px;
     position: relative;
     @media all and (max-width: 500px){
       max-width: calc(100vw - 40px);
@@ -268,15 +480,15 @@
   }
   &__close{
     position: absolute;
-    width: 5.6rem;
-    height: 5.6rem;
+    width: 56px;
+    height: 56px;
     background: linear-gradient(106.14deg, #FFFFFF -54.27%, rgba(255, 255, 255, 0) 111.05%);
     box-shadow: inset 0px 1px 0px #FFFFFF;
     filter: drop-shadow(0px 90px 98px rgba(0, 0, 0, 0.05));
     backdrop-filter: blur(3px);
     border-radius: 31px;
-    right: -5.6rem;
-    top: -5.6rem;
+    right: -56px;
+    top: -56px;
     cursor: pointer;
     display: flex;
     align-items: center;
@@ -295,8 +507,8 @@
     }
   }
   &__form{
-    margin-top: 3.6rem;
-    padding: 0 6.4rem;
+    margin-top: 36px;
+    padding: 0 64px;
     text-align: center;
     .acceptance{
       display: flex;
@@ -359,20 +571,20 @@
     span{
       width: 100%;
       display: block;
-      margin-bottom: 2.9rem;
+      margin-bottom: 29px;
     }
     input{
       background: #FFFFFF;
       border: 1px solid #A9B3C0;
       border-radius: 38px;
       width: 100%;
-      padding: 1.4rem 3.7rem;
-      margin-top: 0.8rem;
+      padding: 14px 37px;
+      margin-top: 8px;
       text-align: left;
     }
     label{
       font-weight: 400;
-      font-size: 1.4rem;
+      font-size: 14px;
       line-height: 100%;
       text-align: center;
       letter-spacing: 0.02em;
@@ -381,7 +593,7 @@
     .fade-button{
       display: inline-block;
       position: relative;
-      margin-top: 3.9rem;
+      margin-top: 39px;
       &:before{
         top: 0;
         left: 0;
@@ -406,7 +618,7 @@
       }
       svg{
         position: absolute;
-        right: 2.5rem;
+        right: 25rem;
         top: calc(50% - 4px);
         pointer-events: none;
       }
@@ -426,11 +638,11 @@
       }
     }
     .wpcf7-submit{
-      max-width: 37.7rem;
+      max-width: 377px;
       width: 100%;
-      margin-top: 5.7rem;
+      margin-top: 57px;
       font-weight: 400;
-      font-size: 1.4rem;
+      font-size: 14px;
       line-height: 141.3%;
       text-align: center;
       letter-spacing: 0.02em;
@@ -443,26 +655,41 @@
   }
   &__title{
     font-weight: 400;
-    font-size: 2rem;
+    font-size: 20px;
     line-height: 160.4%;
     text-align: center;
     letter-spacing: 0.02em;
     color: #15223D;
     margin-bottom: 0;
+    @media all and (max-width: 1600px){
+
+    }
+    @media all and (max-width: 1400px){
+
+    }
+    @media all and (max-width: 1024px){
+
+    }
+    @media all and (max-width: 768px){
+
+    }
+    @media all and (max-width: 500px){
+
+    }
   }
   &__contacts{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    margin-top: 6.2rem;
+    margin-top: 62px;
     &-item{
       display: block;
       font-weight: 400;
-      font-size: 1.8rem;
+      font-size: 18px;
       line-height: 141.3%;
       letter-spacing: 0.02em;
       color: #15223D;
-      margin-bottom: 0.8rem;
+      margin-bottom: 8px;
       text-decoration: none;
     }
     .desc{
@@ -475,13 +702,13 @@
     &-column{
       width: calc(50% - 25px);
       position: relative;
-      padding-left: 6.2rem;
+      padding-left: 62px;
       svg{
         position: absolute;
         left: 0;
         top: 0;
-        width: 3.6rem;
-        height: 3.6rem;
+        width: 36px;
+        height: 36px;
       }
     }
   }
