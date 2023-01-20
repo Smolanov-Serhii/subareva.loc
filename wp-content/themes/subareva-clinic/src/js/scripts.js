@@ -11,6 +11,17 @@ $(document).ready(function () {
         });
     }
 
+    if ($('.maintenance').length) {
+        $(".form__js").click(function () {
+            $('.fade').addClass('showed');
+            $('.fade__container').fadeIn(300);
+        });
+        $(".fade__close").click(function () {
+            $('.fade').removeClass('showed');
+            $('.fade__container').fadeOut(300);
+        });
+    }
+
     AOS.init({
         // Global settings:
         // disable: function() {
