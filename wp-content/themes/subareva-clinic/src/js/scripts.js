@@ -15,10 +15,12 @@ $(document).ready(function () {
         $(".form__js").click(function () {
             $('.fade').addClass('showed');
             $('.fade__container').fadeIn(300);
+            $('.maintenance').addClass('showed');
         });
         $(".fade__close").click(function () {
             $('.fade').removeClass('showed');
             $('.fade__container').fadeOut(300);
+            $('.maintenance').removeClass('showed');
         });
     }
 
