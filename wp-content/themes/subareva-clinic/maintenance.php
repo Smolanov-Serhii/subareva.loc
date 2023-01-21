@@ -54,10 +54,12 @@ $post_id = get_the_ID();
                 </div>
             </div>
             <div class="maintenance__btn form__js" data-aos="fade-up" data-aos-delay="3000">
-                <span><?php echo the_field("nadpis_na_knopke", $post_id); ?></span>
-                <svg width="26" height="8" viewBox="0 0 26 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path fill-rule="evenodd" clip-rule="evenodd" d="M22.1716 0.46444L25.3536 3.64642C25.5488 3.84168 25.5488 4.15826 25.3536 4.35353L22.1716 7.53551C21.9763 7.73077 21.6597 7.73077 21.4645 7.53551C21.2692 7.34025 21.2692 7.02366 21.4645 6.8284L23.7929 4.49997H0V3.49997H23.7929L21.4645 1.17155C21.2692 0.976284 21.2692 0.659702 21.4645 0.46444C21.6597 0.269178 21.9763 0.269178 22.1716 0.46444Z" fill="white"/>
-                </svg>
+                <div class="maintenance__btn-wrapper">
+                    <span><?php echo the_field("nadpis_na_knopke", $post_id); ?></span>
+                    <svg width="26" height="8" viewBox="0 0 26 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M22.1716 0.46444L25.3536 3.64642C25.5488 3.84168 25.5488 4.15826 25.3536 4.35353L22.1716 7.53551C21.9763 7.73077 21.6597 7.73077 21.4645 7.53551C21.2692 7.34025 21.2692 7.02366 21.4645 6.8284L23.7929 4.49997H0V3.49997H23.7929L21.4645 1.17155C21.2692 0.976284 21.2692 0.659702 21.4645 0.46444C21.6597 0.269178 21.9763 0.269178 22.1716 0.46444Z" fill="white"/>
+                    </svg>
+                </div>
             </div>
             <div class="maintenance__socials" data-aos="fade-up" data-aos-delay="3200">
                 <?php
@@ -65,11 +67,14 @@ $post_id = get_the_ID();
                     while( have_rows('soczialnye_seti', $post_id) ) : the_row();
                         $sub_title = get_sub_field('nazvanie_soczialnoj_seti');
                         $sub_src = get_sub_field('ssylka_na_soczialnuyu_set');
-                        ?>
-                        <a href="<?php echo $sub_src; ?>" class="maintenance__socials-item">
-                            <?php echo $sub_title; ?>
-                        </a>
-                    <?php
+                        if($sub_src){
+                            ?>
+                            <a href="<?php echo $sub_src; ?>" class="maintenance__socials-item">
+                                <?php echo $sub_title; ?>
+                            </a>
+                            <?php
+                        }
+
                     endwhile;
                 endif;
                 ?>

@@ -352,11 +352,41 @@
     background: linear-gradient(131.19deg, #FFFFFF 15.91%, #FFFFFF 84.39%);
     box-shadow: 10px 10px 30px rgba(174, 174, 192, 0.4), -10px -10px 30px #FFFFFF;
     border-radius: 75px;
-    padding: 20px 55px;
-    position: relative;
     overflow: hidden;
     cursor: pointer;
     transition: 0.3s ease-in-out;
+    &-wrapper{
+      position: relative;
+      transition: 0.3s ease-in-out;
+      padding: 20px 55px;
+      &:before{
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        content: "";
+        position: absolute;
+        background: linear-gradient(269.16deg, #7283FF 0.38%, #FF2CEA 99.77%);
+        box-shadow: 10px 10px 30px rgba(174, 174, 192, 0.4), -10px -10px 30px #FFFFFF;
+        border-radius: 75px;
+        opacity: 0;
+        transition: 0.3s ease-in-out;
+      }
+      &:hover{
+        padding-left: 32px;
+        padding-right: 79px;
+        svg{
+          opacity: 1;
+        }
+        &:before{
+          opacity: 1;
+
+        }
+        span{
+          color: white;
+        }
+      }
+    }
     @media all and (max-width: 768px){
       padding: 20px 20px;
       width: 100%;
@@ -370,20 +400,6 @@
       z-index: 1;
       pointer-events: none;
     }
-    &:hover{
-      padding-left: 32px;
-      padding-right: 79px;
-      svg{
-        opacity: 1;
-      }
-      &:before{
-        opacity: 1;
-
-      }
-      span{
-        color: white;
-      }
-    }
     span, input{
       position: relative;
       transition: 0.3s ease-in-out;
@@ -394,19 +410,6 @@
       letter-spacing: 0.02em;
       text-transform: uppercase;
       color: #15223D;
-    }
-    &:before{
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      content: "";
-      position: absolute;
-      background: linear-gradient(269.16deg, #7283FF 0.38%, #FF2CEA 99.77%);
-      box-shadow: 10px 10px 30px rgba(174, 174, 192, 0.4), -10px -10px 30px #FFFFFF;
-      border-radius: 75px;
-      opacity: 0;
-      transition: 0.3s ease-in-out;
     }
   }
   &__socials{
@@ -496,6 +499,8 @@
   justify-content: center;
   z-index: 999;
   pointer-events: none;
+  padding: 73px 0 20px 0;
+  overflow-y: scroll;
   &:before{
     position: fixed;
     top: 0;
@@ -537,13 +542,15 @@
       padding: 90px 68px 68px 68px;
     }
     @media all and (max-width: 1024px){
-      padding: 90px 40px 40px 40px;
+      padding: 40px 40px 40px 40px;
     }
     @media all and (max-width: 768px){
-      padding: 90px 30px 40px 30px;
+      padding: 25px 25px 36px 25px;
+      width: 100%;
     }
     @media all and (max-width: 500px){
       max-width: calc(100vw - 40px);
+      margin-top: 30px;
     }
   }
   &__close{
@@ -562,9 +569,14 @@
     align-items: center;
     justify-content: center;
     @media all and (max-width: 1200px){
-      right: 20px;
-      top: 20px;
-      border: 1px solid #15223D;
+      right: 0;
+      top: -53px;
+      width: 40px;
+      height: 40px;
+      svg{
+        width: 17px;
+        height: 17px;
+      }
     }
     svg{
       path{
@@ -583,10 +595,20 @@
     margin-top: 36px;
     padding: 0 64px;
     text-align: center;
+    @media all and (max-width: 768px){
+      padding: 0 20px;
+    }
+    @media all and (max-width: 500px){
+      padding: 0;
+    }
     .acceptance{
       display: flex;
       color: #15223D;
       font-weight: 400;
+      align-items: center;
+      @media all and (max-width: 500px){
+        font-size: 10px;
+      }
       > .wpcf7-form-control-wrap{
         width: auto;
         height: auto;
@@ -750,7 +772,7 @@
       font-size: 16px;
     }
     @media all and (max-width: 500px){
-
+      font-size: 14px;
     }
   }
   &__contacts{
@@ -758,6 +780,10 @@
     flex-wrap: wrap;
     justify-content: space-between;
     margin-top: 62px;
+    @media all and (max-width: 768px){
+      flex-direction: column;
+      align-items: center;
+    }
     &-item{
       display: block;
       font-weight: 400;
@@ -769,6 +795,9 @@
       text-decoration: none;
       @media all and (max-width: 1200px){
         font-size: 16px;
+        &:last-child{
+          margin-bottom: 0;
+        }
       }
     }
     .desc{
@@ -777,11 +806,22 @@
       line-height: 98.3%;
       letter-spacing: 0.02em;
       color: #A9B3C0;
+      @media all and (max-width: 768px){
+        font-size: 12px;
+        margin-bottom: 0;
+      }
     }
     &-column{
       width: calc(50% - 25px);
       position: relative;
       padding-left: 62px;
+      @media all and (max-width: 768px){
+        width: 300px;
+        margin-bottom: 26px;
+        &:last-child{
+          margin-bottom: 0;
+        }
+      }
       svg{
         position: absolute;
         left: 0;
