@@ -118,6 +118,13 @@ $post_id = get_the_ID();
             </div>
         </div>
     </section>
+    <section class="popup" style="display: none">
+        <div id="success-send" class="success-send" style="display: none">
+            <div class="success-send__popup">
+                Данные успешно отправлены
+            </div>
+        </div>
+    </section>
 </main>
 
 <?php wp_footer(); ?>

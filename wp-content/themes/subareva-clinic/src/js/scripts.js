@@ -24,6 +24,18 @@ $(document).ready(function () {
         });
     }
 
-
+    if ($(".popup").length){
+        document.addEventListener( 'wpcf7mailsent', function( event ) {
+            $('.fade').removeClass('showed');
+            $('.fade__container').fadeOut(300);
+            $('.popup').fadeIn(300);
+            $('#success-send').fadeIn(300);
+            $('.wpcf7-response-output').empty();
+            setTimeout(function (){
+                $('#success-send').fadeOut(300);
+                $('.popup').fadeOut(300);
+            }, 2000);
+        }, false );
+    };
 });
 
